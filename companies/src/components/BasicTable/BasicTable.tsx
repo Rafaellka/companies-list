@@ -32,7 +32,7 @@ export const BasicTable: React.FC = () => {
             INN: INN,
             OGRN: info.data.ogrn,
             //Информация о дате регистрации не приходит, поэтому поставлю текущую дату
-            date: new Date().toString()
+            date: new Date().toLocaleDateString().split('.').reverse().join('-')
         }
         fillRow(newRow);
     }
@@ -81,6 +81,7 @@ export const BasicTable: React.FC = () => {
                             <TableCell>
                                 <Editable text={row.address}>
                                     <TextField
+                                        sx={{width: '100%'}}
                                         variant='standard'
                                         autoFocus={true}
                                         value={row.address}
