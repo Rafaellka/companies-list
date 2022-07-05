@@ -3,5 +3,5 @@ export interface ICompamyInfo {
     address: string;
     OGRN: string;
     INN: string;
-    date: Date;
+    date: string;
 }

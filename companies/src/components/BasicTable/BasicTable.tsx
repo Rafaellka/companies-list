@@ -32,7 +32,7 @@ export const BasicTable: React.FC = () => {
             INN: INN,
             OGRN: info.data.ogrn,
             //Информация о дате регистрации не приходит, поэтому поставлю текущую дату
-            date: new Date()
+            date: new Date().toString()
         }
         fillRow(newRow);
     }
